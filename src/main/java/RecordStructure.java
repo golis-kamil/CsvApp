@@ -1,25 +1,18 @@
 /**
  * Created by trot on 27.12.16.
  */
-public class RecordStruct {
+public class RecordStructure {
 
     public int count;
-    public Double avgValue;
+    public double avgValue;
     public Double minValue;
     public Double maxValue;
 
-    public RecordStruct(int count, Double avgValue, Double minValue, Double maxValue) {
-        this.count = count;
-        this.avgValue = avgValue;
-        this.minValue = minValue;
-        this.maxValue = maxValue;
-    }
-
-    public RecordStruct() {
+    public RecordStructure() {
         this.count = 0;
         this.avgValue = 0d;
-        this.maxValue = 0d;
-        this.minValue = 0d;
+        this.maxValue = null;
+        this.minValue = null;
     }
 
     public void setCount(int count) {
@@ -55,10 +48,3 @@ public class RecordStruct {
     }
 
 }
-
-
-
-
-/*
-Group, Size, Avg. Value, Min. Value, Max. Value
- */
