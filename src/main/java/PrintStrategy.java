@@ -6,5 +6,6 @@ import java.util.Map;
 public interface PrintStrategy {
 
     public void printData();
+
     public void setSourceData(Map<String, RecordStructure> records);
 }

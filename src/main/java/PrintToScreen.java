@@ -18,7 +18,8 @@ public class PrintToScreen implements PrintStrategy {
 
     }
 
-    public void setSourceData(Map<String, RecordStructure> records){
-        this.records=records;
+    @Override
+    public void setSourceData(Map<String, RecordStructure> records) {
+        this.records = records;
     }
 }

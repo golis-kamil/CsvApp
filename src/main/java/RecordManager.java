@@ -1,8 +1,9 @@
 import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVPrinter;
 import org.apache.commons.csv.CSVRecord;
 
-import java.io.*;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,10 +41,6 @@ public class RecordManager {
             System.err.println("Nie znaleziono pliku.");
         }
         this.printStrategy = printStrategy;
-    }
-
-    public Map<String, RecordStructure> getRecords() {
-        return records;
     }
 
     private void getAndUpdate() throws IOException {
@@ -97,14 +94,14 @@ public class RecordManager {
     }
 
     public void printValues(String fileName) {
-        if(printStrategy instanceof PrintToFile){
+        if (printStrategy instanceof PrintToFile) {
             ((PrintToFile) printStrategy).setFileName(fileName);
         }
         printStrategy.setSourceData(records);
         printStrategy.printData();
     }
 
-    public void printValues(){
+    public void printValues() {
         printStrategy.setSourceData(records);
         printStrategy.printData();
     }
