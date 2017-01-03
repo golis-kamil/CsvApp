@@ -3,10 +3,10 @@
  */
 public class RecordStructure {
 
-    public int count;
-    public double avgValue;
-    public Double minValue;
-    public Double maxValue;
+    private int count;
+    private double avgValue;
+    private Double minValue;
+    private Double maxValue;
 
     public RecordStructure() {
         this.count = 0;
